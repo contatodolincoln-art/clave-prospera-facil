@@ -27,14 +27,14 @@ const BenefitsGrid = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-warm">
+    <section className="py-20 bg-tab-secondary-bg">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-16 slide-up">
-            <h2 className="text-4xl font-playfair font-bold text-foreground">
+            <h2 className="text-4xl font-playfair font-bold text-tab-secondary-fg">
               Benefícios que fazem a diferença
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-tab-secondary-fg/80">
               Tudo pensado para maximizar seu sucesso como professor
             </p>
           </div>
@@ -45,19 +45,19 @@ const BenefitsGrid = () => {
               return (
                 <Card 
                   key={index}
-                  className="text-center p-6 border-0 bg-card hover:shadow-glow transition-all duration-300 slide-up"
+                  className="text-center p-6 border-0 bg-tab-cream-bg hover:shadow-glow transition-all duration-300 slide-up card-musical"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="space-y-4 p-0">
-                    <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <div className="mx-auto w-16 h-16 rounded-full bg-tab-primary-bg/20 flex items-center justify-center text-tab-primary-bg">
                       <Icon size={28} />
                     </div>
                     
                     <div className="space-y-3">
-                      <h3 className="text-lg font-semibold text-foreground">
+                      <h3 className="text-lg font-semibold text-tab-cream-fg">
                         {benefit.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-tab-cream-fg/70 leading-relaxed">
                         {benefit.description}
                       </p>
                     </div>

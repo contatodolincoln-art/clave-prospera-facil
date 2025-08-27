@@ -31,11 +31,21 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					glow: 'hsl(var(--primary-glow))',
+					variant: 'hsl(var(--primary-variant))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					variant: 'hsl(var(--secondary-variant))'
+				},
+				tab: {
+					'primary-bg': 'hsl(var(--tab-primary-bg))',
+					'primary-fg': 'hsl(var(--tab-primary-fg))',
+					'secondary-bg': 'hsl(var(--tab-secondary-bg))',
+					'secondary-fg': 'hsl(var(--tab-secondary-fg))',
+					'cream-bg': 'hsl(var(--tab-cream-bg))',
+					'cream-fg': 'hsl(var(--tab-cream-fg))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -72,6 +82,8 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-warm': 'var(--gradient-warm)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-primary-dark': 'var(--gradient-primary-dark)',
+				'gradient-secondary-warm': 'var(--gradient-secondary-warm)',
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',

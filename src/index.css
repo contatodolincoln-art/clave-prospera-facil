@@ -46,10 +46,25 @@
     --input: 54 30% 85%;
     --ring: 15 59% 50%;
 
+    /* Color variations for tabs/sections */
+    --primary-variant: 15 59% 40%; /* Darker version of c95f35 */
+    --secondary-variant: 33 80% 45%; /* Darker version of ec8d33 */
+    --card-variant: 54 60% 82%; /* Slightly darker cream */
+    
+    /* Tab-specific color schemes */
+    --tab-primary-bg: 15 59% 50%; /* c95f35 as background */
+    --tab-primary-fg: 0 0% 95%; /* Light text on dark bg */
+    --tab-secondary-bg: 33 80% 56%; /* ec8d33 as background */
+    --tab-secondary-fg: 0 0% 12%; /* Dark text on light bg */
+    --tab-cream-bg: 54 70% 88%; /* f7f6ca variation */
+    --tab-cream-fg: 0 0% 12%;
+
     /* Musical gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-warm: linear-gradient(135deg, hsl(54 40% 90%), hsl(54 50% 85%));
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 95%), hsl(54 20% 92%));
+    --gradient-primary-dark: linear-gradient(135deg, hsl(var(--tab-primary-bg)), hsl(var(--primary-variant)));
+    --gradient-secondary-warm: linear-gradient(135deg, hsl(var(--tab-secondary-bg)), hsl(var(--secondary-variant)));
     
     /* Shadows */
     --shadow-glow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
