@@ -6,11 +6,12 @@ const EarningsSimulator = () => {
   const [days, setDays] = useState([15]);
   const [hoursPerDay, setHoursPerDay] = useState([4]);
   
-  const pricePerClass = 31.25;
-  const classesPerHour = 1; // Assuming 1 hour classes
+  const pricePerHour = 31.25; // R$ 31,25 por hora trabalhada
+  const classesPerHour = 2; // Cada aula dura 30min, então 2 aulas por hora
   
-  const totalClasses = days[0] * hoursPerDay[0] * classesPerHour;
-  const totalEarnings = totalClasses * pricePerClass;
+  const totalHours = days[0] * hoursPerDay[0];
+  const totalClasses = totalHours * classesPerHour;
+  const totalEarnings = totalHours * pricePerHour;
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('pt-BR', {
@@ -29,13 +30,9 @@ const EarningsSimulator = () => {
   };
 
   const getHoursDisplay = (sliderValue: number) => {
-    // Convert slider value to actual time
-    // 0 = 15min, 1 = 30min, 2 = 45min, 3 = 1h, etc.
-    const totalMinutes = sliderValue === 0 ? 15 : sliderValue * 15;
-    if (totalMinutes >= 60) {
-      return Math.floor(totalMinutes / 60);
-    }
-    return totalMinutes / 60; // For values less than 1 hour
+    // Convert slider value to actual time  
+    // 1 = 1h, 2 = 2h, etc.
+    return sliderValue;
   };
 
   return (
@@ -82,19 +79,19 @@ const EarningsSimulator = () => {
                 Horas por dia
               </label>
               <span className="text-lg font-semibold text-primary">
-                {formatMinutesToHours(hoursPerDay[0] * 15)}
+                {hoursPerDay[0]}h
               </span>
             </div>
             <Slider
               value={hoursPerDay}
               onValueChange={setHoursPerDay}
-              max={48} // 48 * 15min = 12 hours
-              min={1}  // 1 * 15min = 15min
+              max={12} // 12 horas máximo
+              min={1}  // 1 hora mínimo
               step={1}
               className="w-full"
             />
             <div className="flex justify-between text-xs text-muted-foreground">
-              <span>15min</span>
+              <span>1h</span>
               <span>12h</span>
             </div>
           </div>
@@ -109,6 +106,9 @@ const EarningsSimulator = () => {
             <div className="text-3xl font-bold counter-animation">
               {totalClasses} aulas
             </div>
+            <p className="text-xs opacity-80">
+              * Cada aula dura 30 minutos
+            </p>
           </div>
           
           <div className="space-y-2">
@@ -118,9 +118,6 @@ const EarningsSimulator = () => {
             <div className="text-4xl font-playfair font-bold counter-animation">
               {formatCurrency(totalEarnings)}
             </div>
-            <p className="text-xs opacity-80">
-              * Baseado em R$ 31,25 por aula
-            </p>
           </div>
         </div>
       </CardContent>
