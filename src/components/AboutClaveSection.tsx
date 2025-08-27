@@ -65,32 +65,34 @@ const AboutClaveSection = () => {
           </div>
 
           {/* Mission statement - Split layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-            {/* Left side - Image */}
-            <div className="relative overflow-hidden">
-              <img 
-                src={missionHero} 
-                alt="Professor de música ensinando em estúdio profissional" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            {/* Right side - Content */}
-            <div className="bg-foreground text-background flex items-center p-8 md:p-12 lg:p-16">
-              <div className="space-y-6">
-                <h3 className="text-4xl md:text-5xl font-bold font-playfair leading-tight">
-                  EDUCAÇÃO MUSICAL DE
-                  <br />
-                  <span className="text-primary">QUALIDADE</span>
-                </h3>
-                <p className="text-lg md:text-xl leading-relaxed opacity-90">
-                  Nossa dedicação à excelência é evidente pelo cuidado completo que temos 
-                  com cada professor e aluno em nossa plataforma, oferecendo uma experiência 
-                  única que define os padrões éticos e humanos da educação musical.
-                </p>
+          <Card className="overflow-hidden border-0 bg-gradient-to-br from-primary/5 to-primary/10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+              {/* Left side - Image */}
+              <div className="relative overflow-hidden">
+                <img 
+                  src={missionHero} 
+                  alt="Professor de música ensinando em estúdio profissional" 
+                  className="w-full h-full object-cover"
+                />
               </div>
+              
+              {/* Right side - Content */}
+              <CardContent className="flex items-center p-8 md:p-12 lg:p-16">
+                <div className="space-y-6">
+                  <div className="text-4xl mb-6 text-primary">♪ ♫ ♪</div>
+                  <h3 className="text-3xl md:text-4xl font-playfair font-bold text-foreground leading-tight">
+                    NOSSA <span className="text-primary">MISSÃO</span>
+                  </h3>
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                    Acreditamos que todo professor de música merece reconhecimento e remuneração 
+                    justa por sua dedicação. Nossa plataforma foi criada para quebrar barreiras 
+                    geográficas e conectar talentos musicais com estudantes apaixonados, 
+                    criando uma comunidade próspera onde a música floresce.
+                  </p>
+                </div>
+              </CardContent>
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </section>
