@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Music, Award, Users } from 'lucide-react';
+import missionHero from '@/assets/mission-hero.jpg';
 
 const AboutClaveSection = () => {
   const features = [
@@ -63,23 +64,33 @@ const AboutClaveSection = () => {
             })}
           </div>
 
-          {/* Mission statement */}
-          <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-0 slide-up" style={{ animationDelay: '0.6s' }}>
-            <CardContent className="p-8 md:p-12 text-center">
-              <div className="max-w-3xl mx-auto space-y-6">
-                <div className="text-4xl mb-6">♪ ♫ ♪</div>
-                <h3 className="text-2xl font-playfair font-semibold text-foreground">
-                  Nossa missão
+          {/* Mission statement - Split layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+            {/* Left side - Image */}
+            <div className="relative overflow-hidden">
+              <img 
+                src={missionHero} 
+                alt="Professor de música ensinando em estúdio profissional" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Right side - Content */}
+            <div className="bg-foreground text-background flex items-center p-8 md:p-12 lg:p-16">
+              <div className="space-y-6">
+                <h3 className="text-4xl md:text-5xl font-bold font-playfair leading-tight">
+                  EDUCAÇÃO MUSICAL DE
+                  <br />
+                  <span className="text-primary">QUALIDADE</span>
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Acreditamos que todo professor de música merece reconhecimento e remuneração 
-                  justa por sua dedicação. Nossa plataforma foi criada para quebrar barreiras 
-                  geográficas e conectar talentos musicais com estudantes apaixonados, 
-                  criando uma comunidade próspera onde a música floresce.
+                <p className="text-lg md:text-xl leading-relaxed opacity-90">
+                  Nossa dedicação à excelência é evidente pelo cuidado completo que temos 
+                  com cada professor e aluno em nossa plataforma, oferecendo uma experiência 
+                  única que define os padrões éticos e humanos da educação musical.
                 </p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
