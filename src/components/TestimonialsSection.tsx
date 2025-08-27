@@ -59,19 +59,19 @@ const TestimonialsSection = () => {
             </p>
           </div>
 
-          <Card className="bg-gradient-primary-dark border-0 shadow-glow slide-up" style={{ animationDelay: '0.3s' }}>
+          <Card className="bg-primary border-0 shadow-glow slide-up" style={{ animationDelay: '0.3s' }}>
             <CardContent className="p-8 md:p-12">
               <div className="text-center space-y-8">
                 {/* Profile */}
                 <div className="space-y-4">
-                  <div className="w-20 h-20 bg-gradient-secondary-warm rounded-full flex items-center justify-center text-2xl text-tab-primary-fg font-bold mx-auto">
+                  <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center text-2xl text-secondary-foreground font-bold mx-auto">
                     {currentData.image}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-tab-primary-fg">
+                    <h3 className="text-2xl font-semibold text-primary-foreground">
                       {currentData.name}
                     </h3>
-                    <p className="text-tab-primary-fg/80">
+                    <p className="text-primary-foreground/80">
                       Professora de {currentData.instrument}
                     </p>
                   </div>
@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Testimonial */}
-                <blockquote className="text-xl text-tab-primary-fg italic leading-relaxed max-w-2xl">
+                <blockquote className="text-xl text-primary-foreground italic leading-relaxed max-w-2xl">
                   "{currentData.text}"
                 </blockquote>
 
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
                     <div className="text-2xl font-bold text-secondary">
                       {currentData.earnings}
                     </div>
-                    <p className="text-sm text-tab-primary-fg/70">
+                    <p className="text-sm text-primary-foreground/70">
                       Renda mensal
                     </p>
                   </div>
@@ -107,7 +107,7 @@ const TestimonialsSection = () => {
                     <div className="text-2xl font-bold text-secondary">
                       {currentData.students}
                     </div>
-                    <p className="text-sm text-tab-primary-fg/70">
+                    <p className="text-sm text-primary-foreground/70">
                       Alunos ativos
                     </p>
                   </div>
@@ -119,7 +119,7 @@ const TestimonialsSection = () => {
                     variant="ghost"
                     size="icon"
                     onClick={prevTestimonial}
-                    className="rounded-full text-tab-primary-fg hover:bg-tab-primary-fg/10"
+                    className="rounded-full text-primary-foreground hover:bg-primary-foreground/10"
                   >
                     <ChevronLeft size={20} />
                   </Button>
@@ -130,7 +130,7 @@ const TestimonialsSection = () => {
                         key={index}
                         onClick={() => setCurrentTestimonial(index)}
                         className={`w-3 h-3 rounded-full transition-colors ${
-                          index === currentTestimonial ? 'bg-secondary' : 'bg-tab-primary-fg/30'
+                          index === currentTestimonial ? 'bg-secondary' : 'bg-primary-foreground/30'
                         }`}
                       />
                     ))}
@@ -140,7 +140,7 @@ const TestimonialsSection = () => {
                     variant="ghost"
                     size="icon"
                     onClick={nextTestimonial}
-                    className="rounded-full text-tab-primary-fg hover:bg-tab-primary-fg/10"
+                    className="rounded-full text-primary-foreground hover:bg-primary-foreground/10"
                   >
                     <ChevronRight size={20} />
                   </Button>
