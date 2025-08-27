@@ -67,26 +67,18 @@ const AuthoritySection = () => {
           
           {/* Main content */}
           <div className="relative z-10">
-            {/* Large centered stat */}
-            <div className="text-center mb-16 slide-up">
-              <div className="inline-flex items-center gap-6 bg-card/30 backdrop-blur-sm rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300">
-                <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground shadow-glow">
-                  <Users size={32} />
-                </div>
-                <div className="text-left">
-                  <div className="text-6xl md:text-7xl font-bold text-foreground font-playfair counter-animation">
-                    {teachersCount}+
-                  </div>
-                  <p className="text-xl text-muted-foreground font-medium">
-                    professores aguardando
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Side stats */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* All stats in one line */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto items-center">
               <div className="slide-up stagger-1">
+                <StatItem 
+                  icon={Users} 
+                  value={`${teachersCount}+`} 
+                  label="professores aguardando" 
+                  isAnimated={true}
+                />
+              </div>
+              
+              <div className="slide-up stagger-2">
                 <StatItem 
                   icon={Phone} 
                   value="24/7" 
@@ -95,7 +87,7 @@ const AuthoritySection = () => {
                 />
               </div>
               
-              <div className="slide-up stagger-2">
+              <div className="slide-up stagger-3">
                 <StatItem 
                   icon={DollarSign} 
                   value="100%" 
