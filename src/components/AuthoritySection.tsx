@@ -38,7 +38,7 @@ const AuthoritySection = () => {
   }, []);
 
   const AnimatedTeachersCard = () => (
-    <Card className="text-center p-8 border bg-card">
+    <Card className="text-center p-8 border">
       <CardContent className="space-y-4 p-0">
         <div className="mx-auto w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
           <Users size={32} />
@@ -57,7 +57,7 @@ const AuthoritySection = () => {
   );
 
   const AnimatedPhoneCard = () => (
-    <Card className="text-center p-8 border bg-card">
+    <Card className="text-center p-8 border">
       <CardContent className="space-y-4 p-0">
         <div className="mx-auto w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
           <Phone size={32} />
@@ -77,7 +77,7 @@ const AuthoritySection = () => {
   );
 
   const AnimatedPaymentCard = () => (
-    <Card className="text-center p-8 border bg-card">
+    <Card className="text-center p-8 border">
       <CardContent className="space-y-4 p-0">
         <div className="mx-auto w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
           <DollarSign size={32} />
