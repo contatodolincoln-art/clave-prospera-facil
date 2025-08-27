@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 btn-musical",
-        hero: "bg-gradient-primary text-primary-foreground hover:shadow-glow btn-musical font-semibold",
+        hero: "bg-primary text-primary-foreground hover:bg-primary/80 btn-musical font-semibold shadow-glow",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 btn-musical",
         outline: "border border-primary text-primary hover:bg-primary hover:text-primary-foreground btn-musical",
         ghost: "hover:bg-accent hover:text-accent-foreground",

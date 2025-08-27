@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Button } from '@/components/ui/button';
 import { Users, Phone, DollarSign } from 'lucide-react';
 
 const AuthoritySection = () => {
-  const [teachersCount, setTeachersCount] = useState(450);
-  const [callsActive, setCallsActive] = useState(true);
-  const [depositAmount, setDepositAmount] = useState(0);
-  const [depositAnimation, setDepositAnimation] = useState(false);
+  const [teachersCount, setTeachersCount] = React.useState(450);
+  const [callsActive, setCallsActive] = React.useState(true);
+  const [depositAmount, setDepositAmount] = React.useState(0);
+  const [depositAnimation, setDepositAnimation] = React.useState(false);
 
   // Animate teacher count
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(() => {
       setTeachersCount(prev => {
         const change = Math.random() > 0.7 ? (Math.random() > 0.5 ? 1 : -1) : 0;
@@ -19,7 +20,7 @@ const AuthoritySection = () => {
   }, []);
 
   // Animate phone calls
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(() => {
       setCallsActive(prev => !prev);
     }, 1500);
@@ -27,7 +28,7 @@ const AuthoritySection = () => {
   }, []);
 
   // Animate deposits
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(() => {
       setDepositAnimation(true);
       setDepositAmount(Math.floor(Math.random() * 500) + 100);
@@ -39,7 +40,7 @@ const AuthoritySection = () => {
   const StatItem = ({ icon: Icon, value, label, isAnimated = false, pulse = false }) => (
     <div className="relative group">
       <div className="flex items-center gap-4 hover:scale-105 transition-all duration-300">
-        <div className={`w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground shadow-glow ${pulse ? 'pulse-musical' : ''}`}>
+        <div className={`w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-glow ${pulse ? 'pulse-musical' : ''}`}>
           <Icon size={24} />
         </div>
         <div className="text-left">
@@ -61,8 +62,8 @@ const AuthoritySection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Background decorative elements */}
           <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-primary"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full bg-gradient-contrast"></div>
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-primary"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full bg-secondary"></div>
           </div>
           
           {/* Main content */}
@@ -96,9 +97,19 @@ const AuthoritySection = () => {
               </div>
             </div>
 
+            {/* CTA Section */}
+            <div className="text-center mt-16 slide-up stagger-4">
+              <Button size="lg" variant="hero" className="text-xl px-8 py-4">
+                Comece Agora - É Grátis
+              </Button>
+              <p className="text-sm text-muted-foreground mt-3">
+                Sem taxas de adesão • Suporte completo
+              </p>
+            </div>
+
             {/* Dynamic deposit animation */}
             {depositAnimation && (
-              <div className="fixed bottom-8 right-8 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full shadow-glow animate-fade-in z-20">
+              <div className="fixed bottom-8 right-8 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-glow animate-fade-in z-20">
                 <div className="flex items-center gap-2">
                   <DollarSign size={16} />
                   <span className="text-sm font-semibold">+R$ {depositAmount}</span>

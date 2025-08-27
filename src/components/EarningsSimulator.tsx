@@ -36,7 +36,7 @@ const EarningsSimulator = () => {
   };
 
   return (
-    <Card className="bg-gradient-warm p-8 max-w-2xl mx-auto border-0 shadow-glow">
+    <Card className="bg-card p-8 max-w-2xl mx-auto border-0 shadow-glow">
       <CardContent className="space-y-8 p-0">
         <div className="text-center space-y-3">
           <h3 className="text-2xl font-playfair font-semibold text-foreground">
@@ -98,7 +98,7 @@ const EarningsSimulator = () => {
         </div>
 
         {/* Results */}
-        <div className="text-center space-y-4 p-6 bg-gradient-primary rounded-xl text-primary-foreground">
+        <div className="text-center space-y-4 p-6 bg-primary rounded-xl text-primary-foreground">
           <div className="space-y-2">
             <p className="text-sm opacity-90">
               Você daria aproximadamente

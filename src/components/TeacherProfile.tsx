@@ -12,7 +12,7 @@ const TeacherProfile = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-warm">
+    <section className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-8 mb-16 slide-up">
@@ -26,11 +26,11 @@ const TeacherProfile = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Profile Card */}
-            <Card className="bg-card border-0 shadow-elegant slide-up card-musical">
+            <Card className="bg-background border-0 shadow-elegant slide-up card-musical">
               <CardContent className="p-10 space-y-8">
                 {/* Profile header */}
                 <div className="text-center space-y-6">
-                  <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center text-3xl text-primary-foreground font-bold mx-auto shadow-glow">
+                  <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center text-3xl text-primary-foreground font-bold mx-auto shadow-glow">
                     JS
                   </div>
                   <div>
@@ -56,7 +56,7 @@ const TeacherProfile = () => {
                     {todayClasses.map((classItem, index) => (
                       <div 
                         key={index}
-                        className="flex items-center justify-between p-4 bg-background rounded-xl shadow-soft"
+                        className="flex items-center justify-between p-4 bg-card rounded-xl shadow-soft"
                       >
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-2 text-sm text-primary font-bold bg-primary/10 px-3 py-1 rounded-lg">
@@ -83,7 +83,7 @@ const TeacherProfile = () => {
             {/* Stats and CTA */}
             <div className="space-y-8 slide-up" style={{ animationDelay: '0.3s' }}>
               {/* Monthly earnings */}
-              <Card className="text-center p-8 bg-gradient-primary text-primary-foreground shadow-glow">
+              <Card className="text-center p-8 bg-primary text-primary-foreground shadow-glow">
                 <CardContent className="space-y-6 p-0">
                   <div className="flex items-center justify-center gap-3 mb-4">
                     <DollarSign size={24} />
@@ -103,9 +103,12 @@ const TeacherProfile = () => {
                 <p className="text-xl text-muted-foreground">
                   Você também pode ter resultados como o João!
                 </p>
-                <Button size="lg" className="text-xl px-10 py-6 h-auto bg-primary hover:bg-primary/90 text-primary-foreground btn-musical shadow-elegant">
+                <Button size="lg" variant="hero" className="text-xl px-10 py-6 h-auto">
                   🎯 Quero me tornar professor agora
                 </Button>
+                <p className="text-sm text-muted-foreground">
+                  Cadastro gratuito • Primeiros ganhos em 7 dias
+                </p>
               </div>
             </div>
           </div>

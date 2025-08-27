@@ -1,4 +1,6 @@
 import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Music2, DollarSign, Users } from 'lucide-react';
 
 const WhyClaveSection = () => {
@@ -33,16 +35,16 @@ const WhyClaveSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div 
+                <Card 
                   key={index}
                   className={`text-center p-10 border-0 bg-card shadow-card hover:shadow-elegant transition-all duration-300 card-musical slide-up stagger-${index + 1} rounded-lg`}
                 >
-                  <div className="space-y-8">
-                    <div className="mx-auto w-24 h-24 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground shadow-glow">
+                  <CardContent className="space-y-8 p-0">
+                    <div className="mx-auto w-24 h-24 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-glow">
                       <Icon size={40} />
                     </div>
                     
@@ -54,10 +56,20 @@ const WhyClaveSection = () => {
                         {benefit.description}
                       </p>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               );
             })}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center slide-up stagger-4">
+            <Button size="lg" variant="hero" className="text-xl px-8 py-4">
+              Descubra Seu Potencial
+            </Button>
+            <p className="text-sm text-muted-foreground mt-3">
+              Cadastro gratuito • Comece hoje mesmo
+            </p>
           </div>
         </div>
       </div>

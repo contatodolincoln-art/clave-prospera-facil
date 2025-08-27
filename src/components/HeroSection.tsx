@@ -4,7 +4,7 @@ import EarningsSimulator from './EarningsSimulator';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
+    <section className="min-h-screen bg-background relative overflow-hidden">
       {/* Musical notes decoration */}
       <div className="absolute top-20 left-10 text-6xl text-primary/20 note-float">♪</div>
       <div className="absolute top-40 right-20 text-4xl text-primary/30 note-float" style={{ animationDelay: '1s' }}>♫</div>
@@ -16,7 +16,7 @@ const HeroSection = () => {
           <div className="space-y-6 slide-up">
             <h1 className="text-6xl md:text-8xl font-playfair font-bold text-foreground leading-tight">
               Sua experiência musical merece ser{' '}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
+              <span className="text-primary">
                 bem remunerada
               </span>
             </h1>
@@ -34,7 +34,7 @@ const HeroSection = () => {
 
           {/* CTAs reforçados */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center slide-up" style={{ animationDelay: '0.3s' }}>
-            <Button variant="default" size="lg" className="text-xl px-12 py-6 h-auto bg-primary hover:bg-primary/90 text-primary-foreground btn-musical shadow-elegant">
+            <Button variant="hero" size="lg" className="text-xl px-12 py-6 h-auto">
               🎯 Garantir minha vaga como professor
             </Button>
             <Button variant="outline" size="lg" className="text-xl px-12 py-6 h-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground">

@@ -53,7 +53,7 @@ const ResultsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-warm">
+    <section className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-16 slide-up">

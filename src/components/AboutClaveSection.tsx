@@ -23,7 +23,7 @@ const AboutClaveSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-warm">
+    <section className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-16 slide-up">
@@ -42,7 +42,7 @@ const AboutClaveSection = () => {
               return (
                 <Card 
                   key={index}
-                  className="text-center p-8 border-0 bg-card slide-up"
+                  className="text-center p-8 border-0 bg-background slide-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <CardContent className="space-y-4 p-0">
@@ -65,7 +65,7 @@ const AboutClaveSection = () => {
           </div>
 
           {/* Mission statement - Split layout */}
-          <Card className="overflow-hidden border-0 bg-gradient-to-br from-primary/5 to-primary/10">
+          <Card className="overflow-hidden border-0 bg-background">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
               {/* Left side - Image */}
               <div className="relative overflow-hidden">

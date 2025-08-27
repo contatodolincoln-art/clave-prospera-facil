@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import ProfileSetupMockup from './MemberAreaSimulations/ProfileSetupMockup';
 import ProposalsMockup from './MemberAreaSimulations/ProposalsMockup';
 import ScheduleMockup from './MemberAreaSimulations/ScheduleMockup';
@@ -34,30 +35,30 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-tab-primary-bg">
+    <section className="py-20 bg-primary">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-16 slide-up">
-            <h2 className="text-4xl font-playfair font-bold text-tab-primary-fg">
+            <h2 className="text-4xl font-playfair font-bold text-primary-foreground">
               Como funciona na prática
             </h2>
-            <p className="text-xl text-tab-primary-fg/80">
+            <p className="text-xl text-primary-foreground/80">
               Veja como será sua experiência real na plataforma Clave
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {steps.map((step, index) => {
               const MockupComponent = step.mockup;
               return (
                 <Card 
                   key={index}
-                  className="text-center p-6 border-0 bg-tab-cream-bg relative slide-up card-musical"
+                  className="text-center p-6 border-0 bg-card relative slide-up card-musical"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   {/* Step number */}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-8 h-8 bg-gradient-secondary-warm rounded-full flex items-center justify-center text-tab-secondary-fg font-bold text-sm">
+                    <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground font-bold text-sm">
                       {step.number}
                     </div>
                   </div>
@@ -69,10 +70,10 @@ const HowItWorksSection = () => {
                     </div>
                     
                     <div className="space-y-3">
-                      <h3 className="text-lg font-semibold text-tab-cream-fg">
+                      <h3 className="text-lg font-semibold text-card-foreground">
                         {step.title}
                       </h3>
-                      <p className="text-sm text-tab-cream-fg/70 leading-relaxed">
+                      <p className="text-sm text-card-foreground/70 leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -80,19 +81,26 @@ const HowItWorksSection = () => {
 
                   {/* Connection line (except for last item) */}
                   {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-tab-secondary-bg/50 to-transparent"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-secondary/50"></div>
                   )}
                 </Card>
               );
             })}
           </div>
 
-          {/* Additional info */}
-          <div className="text-center mt-12 slide-up">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-tab-primary-fg px-6 py-3 rounded-full">
+          {/* CTA Section */}
+          <div className="text-center space-y-6 slide-up">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-primary-foreground px-6 py-3 rounded-full mb-6">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium">Interface 100% funcional desde o primeiro dia</span>
             </div>
+            
+            <Button size="lg" variant="outline" className="text-xl px-8 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              Começar Minha Jornada Agora
+            </Button>
+            <p className="text-sm text-primary-foreground/70">
+              Acesso completo • Sem mensalidades
+            </p>
           </div>
         </div>
       </div>
