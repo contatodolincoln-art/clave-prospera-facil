@@ -84,11 +84,14 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-primary-dark': 'var(--gradient-primary-dark)',
 				'gradient-secondary-warm': 'var(--gradient-secondary-warm)',
+				'gradient-vibrant': 'var(--gradient-vibrant)',
+				'gradient-contrast': 'var(--gradient-contrast)',
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
 				'soft': 'var(--shadow-soft)',
 				'card': 'var(--shadow-card)',
+				'elegant': 'var(--shadow-elegant)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

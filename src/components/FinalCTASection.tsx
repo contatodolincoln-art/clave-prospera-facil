@@ -45,87 +45,86 @@ const FinalCTASection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-hero relative overflow-hidden">
+    <section className="py-24 bg-gradient-contrast relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-10 left-10 text-4xl text-primary/20 note-float">♪</div>
-      <div className="absolute bottom-10 right-10 text-5xl text-primary/20 note-float" style={{ animationDelay: '1s' }}>♫</div>
-      <div className="absolute top-1/2 left-20 text-3xl text-primary/20 note-float" style={{ animationDelay: '2s' }}>♪</div>
+      <div className="absolute top-10 left-10 text-4xl text-white/20 note-float">♪</div>
+      <div className="absolute bottom-10 right-10 text-5xl text-white/20 note-float" style={{ animationDelay: '1s' }}>♫</div>
+      <div className="absolute top-1/2 left-20 text-3xl text-white/20 note-float" style={{ animationDelay: '2s' }}>♪</div>
 
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
+        <div className="max-w-5xl mx-auto text-center space-y-16">
           
           {/* Urgency Header */}
-          <div className="space-y-6 slide-up">
-            <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full text-sm font-medium">
-              <Clock size={16} />
+          <div className="space-y-8 slide-up">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-medium">
+              <Clock size={20} />
               <span>Últimas horas para garantir sua vaga</span>
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-foreground leading-tight">
-              Suas últimas{' '}
-              <span className="text-primary">48 horas</span>{' '}
-              para garantir sua vaga
+            <h2 className="text-5xl md:text-7xl font-playfair font-bold text-white leading-tight">
+              Não perca esta{' '}
+              <span className="text-yellow-300">oportunidade única</span>
             </h2>
             
-            <p className="text-xl text-muted-foreground">
-              Não perca a oportunidade de fazer parte da maior plataforma de ensino musical do Brasil
+            <p className="text-2xl text-white/90 max-w-3xl mx-auto font-medium">
+              Faça parte da maior plataforma de ensino musical do Brasil e transforme sua vida
             </p>
           </div>
 
           {/* Countdown and Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 slide-up" style={{ animationDelay: '0.3s' }}>
             
             {/* Countdown */}
-            <Card className="bg-gradient-primary text-primary-foreground border-0 shadow-glow">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <Clock size={20} />
-                  <span className="font-medium">Tempo restante</span>
+            <Card className="bg-white/10 backdrop-blur-sm text-white border-0 shadow-elegant">
+              <CardContent className="p-10 text-center space-y-6">
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <Clock size={24} />
+                  <span className="font-semibold text-xl">Tempo restante</span>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold counter-animation">
+                <div className="grid grid-cols-3 gap-6">
+                  <div className="space-y-2">
+                    <div className="text-4xl font-bold counter-animation">
                       {timeLeft.hours.toString().padStart(2, '0')}
                     </div>
-                    <div className="text-sm opacity-80">horas</div>
+                    <div className="text-lg opacity-80">horas</div>
                   </div>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold counter-animation">
+                  <div className="space-y-2">
+                    <div className="text-4xl font-bold counter-animation">
                       {timeLeft.minutes.toString().padStart(2, '0')}
                     </div>
-                    <div className="text-sm opacity-80">min</div>
+                    <div className="text-lg opacity-80">min</div>
                   </div>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold counter-animation">
+                  <div className="space-y-2">
+                    <div className="text-4xl font-bold counter-animation">
                       {timeLeft.seconds.toString().padStart(2, '0')}
                     </div>
-                    <div className="text-sm opacity-80">seg</div>
+                    <div className="text-lg opacity-80">seg</div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Spots Left */}
-            <Card className="bg-card border-0 shadow-glow">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="flex items-center justify-center gap-2 mb-4 text-foreground">
-                  <Users size={20} />
-                  <span className="font-medium">Vagas restantes</span>
+            <Card className="bg-white/10 backdrop-blur-sm text-white border-0 shadow-elegant">
+              <CardContent className="p-10 text-center space-y-6">
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <Users size={24} />
+                  <span className="font-semibold text-xl">Vagas restantes</span>
                 </div>
                 
-                <div className="space-y-2">
-                  <div className="text-5xl font-bold text-primary counter-animation">
+                <div className="space-y-4">
+                  <div className="text-6xl font-bold text-yellow-300 counter-animation">
                     {spotsLeft}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-lg opacity-80">
                     de 500 vagas iniciais
                   </div>
                   
                   {/* Progress bar */}
-                  <div className="w-full bg-muted rounded-full h-2 mt-4">
+                  <div className="w-full bg-white/20 rounded-full h-3 mt-6">
                     <div 
-                      className="bg-primary h-2 rounded-full transition-all duration-1000"
+                      className="bg-yellow-300 h-3 rounded-full transition-all duration-1000"
                       style={{ width: `${(spotsLeft / 500) * 100}%` }}
                     ></div>
                   </div>
@@ -135,38 +134,37 @@ const FinalCTASection = () => {
           </div>
 
           {/* Main CTA */}
-          <div className="space-y-6 slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="space-y-8 slide-up" style={{ animationDelay: '0.6s' }}>
             <Button 
-              variant="hero" 
               size="lg" 
-              className="text-xl px-12 py-6 h-auto shadow-glow hover:scale-105 transition-transform duration-300"
+              className="text-2xl px-16 py-8 h-auto bg-yellow-300 hover:bg-yellow-400 text-primary shadow-elegant hover:scale-105 transition-all duration-300 font-bold"
             >
-              <Zap size={24} className="mr-2" />
-              QUERO MINHA VAGA AGORA - RESTAM 48H
+              <Zap size={28} className="mr-3" />
+              QUERO MINHA VAGA AGORA - RESTAM POUCAS HORAS
             </Button>
             
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <div className="flex flex-wrap items-center justify-center gap-8 text-lg text-white/90">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-400 rounded-full pulse-musical"></div>
                 <span>Sem taxa de inscrição</span>
               </div>
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span>Suporte 24/7</span>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-400 rounded-full pulse-musical"></div>
+                <span>Suporte 24/7 especializado</span>
               </div>
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span>Pagamentos garantidos</span>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-400 rounded-full pulse-musical"></div>
+                <span>Pagamentos 100% garantidos</span>
               </div>
             </div>
           </div>
 
           {/* Final message */}
-          <div className="space-y-4 slide-up" style={{ animationDelay: '0.9s' }}>
-            <p className="text-lg text-muted-foreground italic">
+          <div className="space-y-6 slide-up" style={{ animationDelay: '0.9s' }}>
+            <p className="text-2xl text-white/90 italic font-playfair">
               "Sua música tem valor. Seu ensino merece reconhecimento."
             </p>
-            <div className="text-2xl">♪ ♫ ♪</div>
+            <div className="text-4xl">♪ ♫ ♪</div>
           </div>
         </div>
       </div>

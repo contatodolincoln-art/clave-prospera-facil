@@ -12,38 +12,38 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
-          {/* Main heading */}
+          {/* Main heading - Hierarquia refinada */}
           <div className="space-y-6 slide-up">
-            <h1 className="text-5xl md:text-7xl font-playfair font-bold text-foreground leading-tight">
+            <h1 className="text-6xl md:text-8xl font-playfair font-bold text-foreground leading-tight">
               Sua experiência musical merece ser{' '}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 bem remunerada
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-2xl md:text-3xl text-muted-foreground max-w-3xl mx-auto font-medium">
               Ensine para todo o Brasil sem sair de casa
             </p>
             
-            <div className="flex items-center justify-center gap-2 text-primary">
-              <span className="text-2xl note-float">♪</span>
-              <span className="text-lg font-medium">Transforme sua paixão em renda</span>
-              <span className="text-2xl note-float" style={{ animationDelay: '0.5s' }}>♫</span>
+            <div className="flex items-center justify-center gap-3 text-primary">
+              <span className="text-3xl note-float">♪</span>
+              <span className="text-xl font-semibold">Transforme sua paixão em renda</span>
+              <span className="text-3xl note-float" style={{ animationDelay: '0.5s' }}>♫</span>
             </div>
           </div>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center slide-up" style={{ animationDelay: '0.3s' }}>
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4 h-auto">
+          {/* CTAs reforçados */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center slide-up" style={{ animationDelay: '0.3s' }}>
+            <Button variant="default" size="lg" className="text-xl px-12 py-6 h-auto bg-primary hover:bg-primary/90 text-primary-foreground btn-musical shadow-elegant">
               🎯 Garantir minha vaga como professor
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 h-auto">
+            <Button variant="outline" size="lg" className="text-xl px-12 py-6 h-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               📖 Ver como funciona
             </Button>
           </div>
 
           {/* Earnings Simulator */}
-          <div className="mt-16 slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="mt-20 slide-up" style={{ animationDelay: '0.6s' }}>
             <EarningsSimulator />
           </div>
         </div>
