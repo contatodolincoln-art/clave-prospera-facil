@@ -45,86 +45,86 @@ const FinalCTASection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-primary relative overflow-hidden musical-bg">
-      {/* Decorative elements com opacidade reduzida */}
-      <div className="absolute top-10 left-10 text-4xl text-primary-foreground/10 note-float">♪</div>
-      <div className="absolute bottom-10 right-10 text-5xl text-primary-foreground/10 note-float" style={{ animationDelay: '1s' }}>♫</div>
-      <div className="absolute top-1/2 left-20 text-3xl text-primary-foreground/10 note-float" style={{ animationDelay: '2s' }}>♪</div>
+    <section className="py-24 bg-primary relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-10 text-4xl text-primary-foreground/20 note-float">♪</div>
+      <div className="absolute bottom-10 right-10 text-5xl text-primary-foreground/20 note-float" style={{ animationDelay: '1s' }}>♫</div>
+      <div className="absolute top-1/2 left-20 text-3xl text-primary-foreground/20 note-float" style={{ animationDelay: '2s' }}>♪</div>
 
-      <div className="container mx-auto px-6 max-w-[1140px]">
+      <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center space-y-16">
           
-          {/* Urgency Header - Duolingo style */}
+          {/* Urgency Header */}
           <div className="space-y-8 slide-up">
-            <div className="inline-flex items-center gap-2 bg-primary-foreground/20 backdrop-blur-sm text-primary-foreground px-6 py-3 rounded-[20px] text-lg font-medium">
+            <div className="inline-flex items-center gap-2 bg-primary-foreground/20 backdrop-blur-sm text-primary-foreground px-6 py-3 rounded-full text-lg font-medium">
               <Clock size={20} />
               <span>Últimas horas para garantir sua vaga</span>
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-primary-foreground leading-tight">
+            <h2 className="text-5xl md:text-7xl font-playfair font-bold text-primary-foreground leading-tight">
               Não perca esta{' '}
-              <span className="text-accent-foreground">oportunidade única</span>
+              <span className="text-secondary">oportunidade única</span>
             </h2>
             
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto font-medium">
+            <p className="text-2xl text-primary-foreground/90 max-w-3xl mx-auto font-medium">
               Faça parte da maior plataforma de ensino musical do Brasil e transforme sua vida
             </p>
           </div>
 
-          {/* Countdown and Stats - Cards Duolingo style */}
+          {/* Countdown and Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 slide-up" style={{ animationDelay: '0.3s' }}>
             
             {/* Countdown */}
-            <Card className="bg-primary-foreground/15 backdrop-blur-sm border-0 shadow-elegant hover-lift">
+            <Card className="bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground border-0 shadow-elegant">
               <CardContent className="p-10 text-center space-y-6">
                 <div className="flex items-center justify-center gap-3 mb-6">
-                  <Clock size={24} className="text-primary-foreground" />
-                  <span className="font-semibold text-xl text-primary-foreground">Tempo restante</span>
+                  <Clock size={24} />
+                  <span className="font-semibold text-xl">Tempo restante</span>
                 </div>
                 
                 <div className="grid grid-cols-3 gap-6">
                   <div className="space-y-2">
-                    <div className="text-4xl font-bold counter-animation text-primary-foreground">
+                    <div className="text-4xl font-bold counter-animation">
                       {timeLeft.hours.toString().padStart(2, '0')}
                     </div>
-                    <div className="text-lg text-primary-foreground/80">horas</div>
+                    <div className="text-lg opacity-80">horas</div>
                   </div>
                   <div className="space-y-2">
-                    <div className="text-4xl font-bold counter-animation text-primary-foreground">
+                    <div className="text-4xl font-bold counter-animation">
                       {timeLeft.minutes.toString().padStart(2, '0')}
                     </div>
-                    <div className="text-lg text-primary-foreground/80">min</div>
+                    <div className="text-lg opacity-80">min</div>
                   </div>
                   <div className="space-y-2">
-                    <div className="text-4xl font-bold counter-animation text-primary-foreground">
+                    <div className="text-4xl font-bold counter-animation">
                       {timeLeft.seconds.toString().padStart(2, '0')}
                     </div>
-                    <div className="text-lg text-primary-foreground/80">seg</div>
+                    <div className="text-lg opacity-80">seg</div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Spots Left */}
-            <Card className="bg-primary-foreground/15 backdrop-blur-sm border-0 shadow-elegant hover-lift">
+            <Card className="bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground border-0 shadow-elegant">
               <CardContent className="p-10 text-center space-y-6">
                 <div className="flex items-center justify-center gap-3 mb-6">
-                  <Users size={24} className="text-primary-foreground" />
-                  <span className="font-semibold text-xl text-primary-foreground">Vagas restantes</span>
+                  <Users size={24} />
+                  <span className="font-semibold text-xl">Vagas restantes</span>
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="text-6xl font-bold text-accent-foreground counter-animation">
+                  <div className="text-6xl font-bold text-secondary counter-animation">
                     {spotsLeft}
                   </div>
-                  <div className="text-lg text-primary-foreground/80">
+                  <div className="text-lg opacity-80">
                     de 500 vagas iniciais
                   </div>
                   
                   {/* Progress bar */}
                   <div className="w-full bg-primary-foreground/20 rounded-full h-3 mt-6">
                     <div 
-                      className="bg-accent-foreground h-3 rounded-full transition-all duration-1000"
+                      className="bg-secondary h-3 rounded-full transition-all duration-1000"
                       style={{ width: `${(spotsLeft / 500) * 100}%` }}
                     ></div>
                   </div>
@@ -133,12 +133,11 @@ const FinalCTASection = () => {
             </Card>
           </div>
 
-          {/* Main CTA - Duolingo urgency style */}
+          {/* Main CTA */}
           <div className="space-y-8 slide-up" style={{ animationDelay: '0.6s' }}>
             <Button 
-              variant="urgent"
-              size="xl" 
-              className="text-2xl px-16 py-8 h-auto bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow font-bold"
+              size="lg" 
+              className="text-2xl px-16 py-8 h-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-elegant hover:scale-105 transition-all duration-300 font-bold"
             >
               <Zap size={28} className="mr-3" />
               QUERO MINHA VAGA AGORA - RESTAM POUCAS HORAS
