@@ -12,12 +12,12 @@
     --background: 48 47% 94%; /* #f9f6f2 */
     --foreground: 0 0% 12%; /* #1e1e1e */
 
-    /* Card system - bege claro */
-    --card: 57 95% 89%; /* #f7f6ca */
+    /* Card system - cinza neutro */
+    --card: 0 0% 95%; /* #f3f3f3 */
     --card-foreground: 0 0% 12%;
 
     /* Popover */
-    --popover: 57 95% 89%;
+    --popover: 0 0% 95%;
     --popover-foreground: 0 0% 12%;
 
     /* Primary - laranja vibrante */
@@ -34,7 +34,7 @@
     --muted-foreground: 0 0% 40%;
 
     /* Accent - variação clara */
-    --accent: 57 95% 89%;
+    --accent: 0 0% 95%;
     --accent-foreground: 0 0% 12%;
 
     /* Destructive stays standard */
@@ -49,14 +49,14 @@
     /* Color variations for tabs/sections */
     --primary-variant: 15 65% 48%; /* Versão mais escura do laranja */
     --secondary-variant: 34 72% 55%; /* Versão mais escura do secundário */
-    --card-variant: 57 90% 85%; /* Creme ligeiramente mais escuro */
+    --card-variant: 0 0% 92%; /* Cinza ligeiramente mais escuro */
     
     /* Tab-specific color schemes - Diversificação */
     --tab-primary-bg: 15 69% 54%; /* #c95f35 como fundo */
     --tab-primary-fg: 0 0% 95%; /* Texto claro no fundo escuro */
     --tab-secondary-bg: 34 76% 61%; /* #ec8d33 como fundo */
     --tab-secondary-fg: 0 0% 12%; /* Texto escuro no fundo claro */
-    --tab-cream-bg: 57 95% 89%; /* #f7f6ca */
+    --tab-cream-bg: 0 0% 95%; /* #f3f3f3 */
     --tab-cream-fg: 0 0% 12%;
 
     /* Solid backgrounds - removing gradients */
