@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Maria Fernanda",
-      instrument: "Piano",
+      instrument: "Piano", 
       image: "MF",
       rating: 5,
       text: "A Clave transformou minha carreira musical. Em 3 meses já tenho uma agenda fixa de 20 alunos e renda consistente de R$ 2.500 por mês.",
@@ -19,7 +19,7 @@ const TestimonialsSection = () => {
     {
       name: "Carlos Eduardo",
       instrument: "Violão",
-      image: "CE",
+      image: "CE", 
       rating: 5,
       text: "Nunca pensei que ensinar online pudesse ser tão gratificante. A plataforma me conecta com alunos realmente comprometidos.",
       earnings: "R$ 3.200/mês",
@@ -47,79 +47,82 @@ const TestimonialsSection = () => {
   const currentData = testimonials[currentTestimonial];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-secondary musical-bg">
+      <div className="container mx-auto px-6 max-w-[1140px]">
         <div className="max-w-4xl mx-auto">
+          {/* Título Duolingo-style */}
           <div className="text-center space-y-6 mb-16 slide-up">
-            <h2 className="text-4xl font-playfair font-bold text-foreground">
-              O que nossos professores dizem
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-foreground">
+              O que nossos professores{' '}
+              <span className="text-primary">realmente dizem</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Histórias reais de transformação e sucesso
+              Histórias reais • Resultados verificados
             </p>
           </div>
 
-          <Card className="bg-primary border-0 shadow-glow slide-up" style={{ animationDelay: '0.3s' }}>
-            <CardContent className="p-8 md:p-12">
+          {/* Card de depoimento com styling Duolingo */}
+          <Card className="bg-card-variant border-0 shadow-elegant slide-up hover-lift" style={{ animationDelay: '0.3s' }}>
+            <CardContent className="p-12">
               <div className="text-center space-y-8">
                 {/* Profile */}
                 <div className="space-y-4">
-                  <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center text-2xl text-secondary-foreground font-bold mx-auto">
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-2xl text-primary-foreground font-bold mx-auto">
                     {currentData.image}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-primary-foreground">
+                    <h3 className="text-2xl font-bold text-foreground">
                       {currentData.name}
                     </h3>
-                    <p className="text-primary-foreground/80">
-                      Professora de {currentData.instrument}
+                    <p className="text-muted-foreground font-medium">
+                      Professor(a) de {currentData.instrument}
                     </p>
                   </div>
                 </div>
 
-                {/* Rating */}
+                {/* Rating stars */}
                 <div className="flex justify-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star 
                       key={i} 
                       size={20} 
-                      className="fill-secondary text-secondary"
+                      className="fill-accent text-accent"
                     />
                   ))}
                 </div>
 
-                {/* Testimonial */}
-                <blockquote className="text-xl text-primary-foreground italic leading-relaxed max-w-2xl">
+                {/* Depoimento */}
+                <blockquote className="text-lg text-foreground italic leading-relaxed max-w-2xl font-medium">
                   "{currentData.text}"
                 </blockquote>
 
-                {/* Stats */}
-                <div className="grid grid-cols-2 gap-8 max-w-sm mx-auto">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-secondary">
+                {/* Stats em chips */}
+                <div className="flex flex-wrap justify-center gap-6">
+                  <div className="bg-primary rounded-[20px] px-6 py-3">
+                    <div className="text-xl font-bold text-primary-foreground">
                       {currentData.earnings}
                     </div>
-                    <p className="text-sm text-primary-foreground/70">
+                    <p className="text-sm text-primary-foreground/80">
                       Renda mensal
                     </p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-secondary">
+                  <div className="bg-accent rounded-[20px] px-6 py-3">
+                    <div className="text-xl font-bold text-accent-foreground">
                       {currentData.students}
                     </div>
-                    <p className="text-sm text-primary-foreground/70">
+                    <p className="text-sm text-accent-foreground/80">
                       Alunos ativos
                     </p>
                   </div>
                 </div>
 
-                {/* Navigation */}
-                <div className="flex justify-center items-center gap-4">
+                {/* Navigation com estilo Duolingo */}
+                <div className="flex justify-center items-center gap-6">
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={prevTestimonial}
-                    className="rounded-full text-primary-foreground hover:bg-primary-foreground/10"
+                    className="rounded-full bg-card hover:bg-accent/10"
                   >
                     <ChevronLeft size={20} />
                   </Button>
@@ -129,8 +132,8 @@ const TestimonialsSection = () => {
                       <button
                         key={index}
                         onClick={() => setCurrentTestimonial(index)}
-                        className={`w-3 h-3 rounded-full transition-colors ${
-                          index === currentTestimonial ? 'bg-secondary' : 'bg-primary-foreground/30'
+                        className={`w-3 h-3 rounded-full transition-all ${
+                          index === currentTestimonial ? 'bg-primary scale-125' : 'bg-muted'
                         }`}
                       />
                     ))}
@@ -140,7 +143,7 @@ const TestimonialsSection = () => {
                     variant="ghost"
                     size="icon"
                     onClick={nextTestimonial}
-                    className="rounded-full text-primary-foreground hover:bg-primary-foreground/10"
+                    className="rounded-full bg-card hover:bg-accent/10"
                   >
                     <ChevronRight size={20} />
                   </Button>
@@ -148,6 +151,16 @@ const TestimonialsSection = () => {
               </div>
             </CardContent>
           </Card>
+
+          {/* CTA após depoimentos */}
+          <div className="text-center mt-12 slide-up" style={{ animationDelay: '0.6s' }}>
+            <Button variant="hero" size="lg">
+              🌟 Quero estar entre esses professores
+            </Button>
+            <p className="text-sm text-muted-foreground mt-3">
+              Junte-se a centenas de professores bem-sucedidos
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -8,88 +8,82 @@
 
 @layer base {
   :root {
-    /* Base colors - Nova paleta refinada */
-    --background: 48 47% 94%; /* #f9f6f2 */
-    --foreground: 0 0% 12%; /* #1e1e1e */
+    /* Duolingo-inspired Design System - Paleta específica */
+    --background: 0 0% 95%; /* #f3f3f3 - BG neutro predominante */
+    --foreground: 0 0% 12%; /* #1e1e1e - Texto principal */
 
-    /* Card system - bege claro */
-    --card: 57 95% 89%; /* #f7f6ca */
+    /* Card system - BG quente para seções especiais */
+    --card: 56 62% 90%; /* #f7f6ca - BG cartões/seções quentes */
     --card-foreground: 0 0% 12%;
 
     /* Popover */
-    --popover: 57 95% 89%;
+    --popover: 0 0% 100%;
     --popover-foreground: 0 0% 12%;
 
-    /* Primary - laranja vibrante */
-    --primary: 15 69% 54%; /* #c95f35 */
-    --primary-foreground: 0 0% 95%;
-    --primary-glow: 34 76% 61%; /* #ec8d33 */
+    /* Primary - CTA primário */
+    --primary: 15 73% 50%; /* #c95f35 - CTA primário */
+    --primary-foreground: 0 0% 100%; /* #ffffff - texto do botão */
+    --primary-glow: 25 79% 57%; /* #ec8d33 - Acentos/hover */
 
-    /* Secondary - laranja mais clara */
-    --secondary: 34 76% 61%; /* #ec8d33 */
+    /* Secondary - BG quente */
+    --secondary: 56 62% 90%; /* #f7f6ca */
     --secondary-foreground: 0 0% 12%;
 
     /* Muted tones */
-    --muted: 48 30% 85%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Accent - variação clara */
-    --accent: 57 95% 89%;
-    --accent-foreground: 0 0% 12%;
+    /* Accent - laranja de hover */
+    --accent: 25 79% 57%; /* #ec8d33 - Acentos/ícones/hover */
+    --accent-foreground: 0 0% 100%;
 
     /* Destructive stays standard */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 95%;
 
     /* Borders and inputs */
-    --border: 48 20% 80%;
-    --input: 48 30% 85%;
-    --ring: 15 69% 54%;
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 15 73% 50%;
 
-    /* Color variations for tabs/sections */
-    --primary-variant: 15 65% 48%; /* Versão mais escura do laranja */
-    --secondary-variant: 34 72% 55%; /* Versão mais escura do secundário */
-    --card-variant: 57 90% 85%; /* Creme ligeiramente mais escuro */
+    /* Color variations for rhythmic sections */
+    --primary-variant: 15 65% 45%; /* Versão mais escura */
+    --secondary-variant: 56 55% 85%; /* Creme mais escuro */
+    --card-variant: 0 0% 100%; /* Branco para cards sobre BG neutro */
     
-    /* Tab-specific color schemes - Diversificação */
-    --tab-primary-bg: 15 69% 54%; /* #c95f35 como fundo */
-    --tab-primary-fg: 0 0% 95%; /* Texto claro no fundo escuro */
-    --tab-secondary-bg: 34 76% 61%; /* #ec8d33 como fundo */
-    --tab-secondary-fg: 0 0% 12%; /* Texto escuro no fundo claro */
-    --tab-cream-bg: 57 95% 89%; /* #f7f6ca */
+    /* Tab-specific color schemes - Ritmo cromático */
+    --tab-primary-bg: 15 73% 50%; /* #c95f35 como fundo */
+    --tab-primary-fg: 0 0% 100%; /* Texto branco no laranja */
+    --tab-secondary-bg: 56 62% 90%; /* #f7f6ca */
+    --tab-secondary-fg: 0 0% 12%; /* Texto escuro no creme */
+    --tab-cream-bg: 56 62% 90%; /* #f7f6ca */
     --tab-cream-fg: 0 0% 12%;
 
-    /* Solid backgrounds - removing gradients */
-    --primary-bg: hsl(var(--primary));
-    --secondary-bg: hsl(var(--secondary));
-    --accent-bg: hsl(var(--accent));
+    /* Solid backgrounds - sem gradientes */
+    --primary-bg: hsl(15, 73%, 50%);
+    --secondary-bg: hsl(56, 62%, 90%);
+    --accent-bg: hsl(25, 79%, 57%);
     
-    /* Shadows suavizadas */
-    --shadow-glow: 0 10px 30px -10px hsl(var(--primary) / 0.2);
-    --shadow-soft: 0 4px 20px -8px hsl(0 0% 12% / 0.08);
-    --shadow-card: 0 8px 25px -8px hsl(var(--primary) / 0.1);
-    --shadow-elegant: 0 12px 40px -12px hsl(var(--primary) / 0.15);
+    /* Sombras Duolingo-style: suaves y=8, blur=24, 10% opacidade */
+    --shadow-glow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-elegant: 0 8px 24px rgba(0, 0, 0, 0.10);
 
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transitions suaves */
+    --transition-smooth: all 0.2s ease-out;
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 16px;
+    /* Border radius Duolingo-style: 20px */
+    --radius: 20px;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -143,125 +137,134 @@
 }
 
 @layer components {
-  /* Musical button animations */
-  .btn-musical {
-    @apply relative overflow-hidden;
-    transition: var(--transition-smooth);
-  }
-  
-  .btn-musical:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
-  }
-  
-  .btn-musical:active {
+/* Duolingo-style Animation Classes */
+.slide-up {
+  animation: slideUp 0.4s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-up {
+  animation: fadeUp 0.3s ease-out forwards;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.note-float {
+  animation: noteFloat 4s ease-in-out infinite;
+}
+
+.pulse-musical {
+  animation: pulseMusical 2s ease-in-out infinite;
+}
+
+.counter-animation {
+  animation: counterPulse 0.6s ease-out;
+}
+
+.hover-lift {
+  transition: var(--transition-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.cta-hover {
+  transition: var(--transition-smooth);
+}
+
+.cta-hover:hover {
+  transform: scale(1.02);
+}
+
+/* Microinterações Duolingo-style */
+@keyframes slideUp {
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
+}
 
-  /* Card hover animations */
-  .card-musical {
-    transition: var(--transition-smooth);
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .card-musical:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card);
-  }
+}
 
-  /* Pulse animation for live status */
-  .pulse-musical {
-    animation: pulse-musical 2s infinite;
+@keyframes noteFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.05;
   }
-  
-  @keyframes pulse-musical {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.1);
-    }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+    opacity: 0.08;
   }
+}
 
-  /* Slide up animation */
-  .slide-up {
-    animation: slideUp 0.6s ease-out;
+@keyframes pulseMusical {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
+}
 
-  /* Counter animation */
-  .counter-animation {
-    animation: counterPop 0.5s ease-out;
+@keyframes counterPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
   }
-  
-  @keyframes counterPop {
-    0% {
-      transform: scale(0.8);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+  50% {
+    transform: scale(1.02);
   }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-  /* Timeline animation for steps */
-  .timeline-step {
-    @apply relative;
-    transition: var(--transition-smooth);
-  }
-  
-  .timeline-step:not(:last-child)::after {
-    content: '';
-    @apply absolute top-20 left-1/2 w-0.5 h-16 bg-gradient-to-b from-primary to-primary/30;
-    transform: translateX(-50%);
-    animation: lineGrow 0.8s ease-out forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
-  }
-  
-  @keyframes lineGrow {
-    from {
-      height: 0;
-      opacity: 0;
-    }
-    to {
-      height: 4rem;
-      opacity: 1;
-    }
-  }
+/* Parallax musical notes - fundo decorativo */
+.musical-bg::before {
+  content: "♪ ♫ ♪ ♫ ♪";
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 2rem;
+  opacity: 0.05;
+  pointer-events: none;
+  animation: noteFloat 6s ease-in-out infinite;
+}
 
-  /* Enhanced slide animations */
-  .slide-in-left {
-    animation: slideInLeft 0.6s ease-out;
-  }
-  
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+.musical-bg::after {
+  content: "♫ ♪ ♫";
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+  font-size: 1.5rem;
+  opacity: 0.05;
+  pointer-events: none;
+  animation: noteFloat 8s ease-in-out infinite reverse;
+}
 
-  /* Staggered animations */
-  .stagger-1 { animation-delay: 0.1s; }
-  .stagger-2 { animation-delay: 0.2s; }
-  .stagger-3 { animation-delay: 0.3s; }
-  .stagger-4 { animation-delay: 0.4s; }
+/* Accessibility - respeitar prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .slide-up,
+  .fade-up,
+  .note-float,
+  .pulse-musical,
+  .counter-animation,
+  .hover-lift,
+  .cta-hover,
+  .btn-musical {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 }
