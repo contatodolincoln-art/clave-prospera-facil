@@ -25,7 +25,6 @@ const Index = () => {
       <div id="como-funciona">
         <HowItWorksSection />
       </div>
-      <InteractiveStatsSection />
       <div id="depoimentos">
         <TestimonialsSection />
       </div>
@@ -35,6 +34,7 @@ const Index = () => {
       </div>
       <TeacherProfile />
       <BenefitsGrid />
+      <InteractiveStatsSection />
       <FloatingNavigation />
     </div>
   );
