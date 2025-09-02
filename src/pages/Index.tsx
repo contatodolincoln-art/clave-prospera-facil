@@ -22,7 +22,6 @@ const Index = () => {
       <WhyClaveSection />
       <PlatformPreviewSection />
       <ValuePropositionSection />
-      <BenefitsGrid />
       <div id="como-funciona">
         <HowItWorksSection />
       </div>
@@ -35,6 +34,7 @@ const Index = () => {
         <FinalCTASection />
       </div>
       <TeacherProfile />
+      <BenefitsGrid />
       <FloatingNavigation />
     </div>
   );
