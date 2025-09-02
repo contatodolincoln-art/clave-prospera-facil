@@ -19,7 +19,6 @@ const Index = () => {
         <HeroSection />
       </div>
       <AuthoritySection />
-      <TeacherProfile />
       <WhyClaveSection />
       <PlatformPreviewSection />
       <ValuePropositionSection />
@@ -35,6 +34,7 @@ const Index = () => {
       <div id="vaga">
         <FinalCTASection />
       </div>
+      <TeacherProfile />
       <FloatingNavigation />
     </div>
   );
