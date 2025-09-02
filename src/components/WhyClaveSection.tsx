@@ -17,7 +17,7 @@ const WhyClaveSection = () => {
     },
     {
       icon: Users,
-      title: "Comunidade que te entende",
+      title: "Autonomia que você merece",
       description: "Conecte-se com outros professores e compartilhe experiências musicais únicas.",
     }
   ];
