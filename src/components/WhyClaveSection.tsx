@@ -18,7 +18,7 @@ const WhyClaveSection = () => {
     {
       icon: Users,
       title: "Autonomia que você merece",
-      description: "Conecte-se com outros professores e compartilhe experiências musicais únicas.",
+      description: "Defina seus horários, preços e metodologia. Você tem controle total sobre seu ensino.",
     }
   ];
 
