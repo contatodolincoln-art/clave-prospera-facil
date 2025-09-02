@@ -68,7 +68,7 @@ const HeroSection = () => {
               <img 
                 src="/lovable-uploads/e60433c9-4e09-40bf-89de-afecda6a7009.png" 
                 alt="Professor ensinando música online" 
-                className="w-full h-auto rounded-2xl shadow-elegant"
+                className="w-3/4 h-auto rounded-2xl shadow-elegant mx-auto"
               />
               
               {/* Floating elements */}
