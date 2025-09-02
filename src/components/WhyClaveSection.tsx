@@ -7,8 +7,8 @@ const WhyClaveSection = () => {
   const benefits = [
     {
       icon: Music2,
-      title: "Autonomia que você merece",
-      description: "Defina seus horários, preços e metodologia. Você tem controle total sobre seu ensino.",
+      title: "Ensine para todo o Brasil sem sair de casa",
+      description: "Compartilhe seu talento musical e alcance alunos em qualquer lugar do país.",
     },
     {
       icon: DollarSign,
