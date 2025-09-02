@@ -31,9 +31,19 @@ const AboutClaveSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return;
-          })}
+              const Icon = feature.icon;
+              return (
+                <Card key={index} className="text-center p-6 bg-tab-cream-bg border-0 slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <CardContent className="space-y-4">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                      <Icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           {/* Mission statement - Split layout */}

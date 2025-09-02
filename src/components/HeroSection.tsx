@@ -66,7 +66,7 @@ const HeroSection = () => {
           <div className="slide-up" style={{ animationDelay: '0.4s' }}>
             <div className="relative">
               <img 
-                src={heroCallIllustration} 
+                src="/lovable-uploads/e60433c9-4e09-40bf-89de-afecda6a7009.png" 
                 alt="Professor ensinando música online" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
               />
