@@ -23,7 +23,7 @@ const WhyClaveSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-8 mb-20 slide-up">

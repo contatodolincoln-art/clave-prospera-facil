@@ -12,7 +12,7 @@ const TeacherProfile = () => {
   ];
 
   return (
-    <section className="py-24 bg-card">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-8 mb-16 slide-up">

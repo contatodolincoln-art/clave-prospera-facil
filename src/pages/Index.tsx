@@ -2,26 +2,40 @@ import HeroSection from '@/components/HeroSection';
 import AuthoritySection from '@/components/AuthoritySection';
 import TeacherProfile from '@/components/TeacherProfile';
 import WhyClaveSection from '@/components/WhyClaveSection';
+import PlatformPreviewSection from '@/components/PlatformPreviewSection';
+import ValuePropositionSection from '@/components/ValuePropositionSection';
 import BenefitsGrid from '@/components/BenefitsGrid';
 import HowItWorksSection from '@/components/HowItWorksSection';
-import ResultsSection from '@/components/ResultsSection';
+import InteractiveStatsSection from '@/components/InteractiveStatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import AboutClaveSection from '@/components/AboutClaveSection';
 import FinalCTASection from '@/components/FinalCTASection';
+import FloatingNavigation from '@/components/FloatingNavigation';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <HeroSection />
+      <div id="hero">
+        <HeroSection />
+      </div>
       <AuthoritySection />
       <TeacherProfile />
       <WhyClaveSection />
+      <PlatformPreviewSection />
+      <ValuePropositionSection />
       <BenefitsGrid />
-      <HowItWorksSection />
-      <ResultsSection />
-      <TestimonialsSection />
+      <div id="como-funciona">
+        <HowItWorksSection />
+      </div>
+      <InteractiveStatsSection />
+      <div id="depoimentos">
+        <TestimonialsSection />
+      </div>
       <AboutClaveSection />
-      <FinalCTASection />
+      <div id="vaga">
+        <FinalCTASection />
+      </div>
+      <FloatingNavigation />
     </div>
   );
 };

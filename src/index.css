@@ -158,6 +158,30 @@
     transform: translateY(0);
   }
 
+  /* Enhanced note float animation */
+  .note-float {
+    animation: noteFloat 4s ease-in-out infinite;
+  }
+  
+  @keyframes noteFloat {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0.6;
+    }
+    25% {
+      transform: translateY(-10px) rotate(2deg);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-5px) rotate(-1deg);
+      opacity: 1;
+    }
+    75% {
+      transform: translateY(-15px) rotate(1deg);
+      opacity: 0.7;
+    }
+  }
+
   /* Card hover animations */
   .card-musical {
     transition: var(--transition-smooth);
@@ -264,4 +288,39 @@
   .stagger-2 { animation-delay: 0.2s; }
   .stagger-3 { animation-delay: 0.3s; }
   .stagger-4 { animation-delay: 0.4s; }
+
+  /* Duolingo-inspired hover effects */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Interactive elements */
+  .interactive-card {
+    transition: var(--transition-smooth);
+    cursor: pointer;
+  }
+  
+  .interactive-card:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Parallax musical notes */
+  .parallax-notes {
+    animation: parallaxFloat 20s linear infinite;
+  }
+  
+  @keyframes parallaxFloat {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+    }
+  }
 }
