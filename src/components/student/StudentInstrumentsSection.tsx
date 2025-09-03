@@ -107,7 +107,7 @@ const StudentInstrumentsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           {instruments.map((instrument) => {
             const Icon = instrument.icon;
             const isExpanded = expandedCard === instrument.id;
@@ -118,44 +118,46 @@ const StudentInstrumentsSection = () => {
                 className={`
                   group cursor-pointer transition-all duration-500 ease-out
                   ${isExpanded 
-                    ? 'md:col-span-2 lg:col-span-2 xl:col-span-2 scale-105' 
-                    : 'hover:scale-105 hover:-translate-y-2'
+                    ? 'sm:col-span-2 lg:col-span-2 xl:col-span-2' 
+                    : 'hover:scale-[1.02] hover:-translate-y-1'
                   }
                 `}
                 onClick={() => setExpandedCard(isExpanded ? null : instrument.id)}
               >
-                <div className="bg-card rounded-2xl p-6 h-full border-2 border-transparent hover:border-primary/20 transition-all duration-300 shadow-card hover:shadow-card-hover">
-                  <div className="relative">
+                <div className="bg-card rounded-2xl p-4 md:p-6 h-full border-2 border-transparent hover:border-primary/20 transition-all duration-300 shadow-card hover:shadow-card-hover">
+                  <div className="flex flex-col h-full">
                     {/* Icon with gradient background */}
                     <div className={`
-                      w-16 h-16 rounded-xl mb-4 flex items-center justify-center
+                      w-12 h-12 md:w-16 md:h-16 rounded-xl mb-3 md:mb-4 flex items-center justify-center flex-shrink-0
                       bg-gradient-to-br ${instrument.color} shadow-lg
                       group-hover:scale-110 transition-transform duration-300
                     `}>
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                     </div>
 
                     {/* Header Info */}
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold mb-2">{instrument.name}</h3>
-                      <p className="text-muted-foreground text-sm mb-3">{instrument.description}</p>
+                    <div className="flex-1">
+                      <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">{instrument.name}</h3>
+                      <p className="text-muted-foreground text-xs md:text-sm mb-3 leading-relaxed">{instrument.description}</p>
                       
-                      <div className="flex items-center justify-between gap-2 text-sm">
-                        <span className="text-primary font-semibold">
+                      {/* Teachers and styles in responsive layout */}
+                      <div className="space-y-2 mb-4">
+                        <span className="block text-primary font-semibold text-sm">
                           {instrument.teachers} professores
                         </span>
-                        {/* Styles tags moved up */}
+                        
+                        {/* Styles tags */}
                         <div className="flex flex-wrap gap-1">
                           {instrument.styles.slice(0, isExpanded ? 4 : 2).map((style) => (
                             <span
                               key={style}
-                              className="px-2 py-1 bg-muted rounded-md text-xs text-muted-foreground"
+                              className="px-2 py-1 bg-muted rounded-md text-xs text-muted-foreground whitespace-nowrap"
                             >
                               {style}
                             </span>
                           ))}
                           {!isExpanded && instrument.styles.length > 2 && (
-                            <span className="px-2 py-1 bg-primary/10 rounded-md text-xs text-primary">
+                            <span className="px-2 py-1 bg-primary/10 rounded-md text-xs text-primary whitespace-nowrap">
                               +{instrument.styles.length - 2}
                             </span>
                           )}
@@ -166,21 +168,21 @@ const StudentInstrumentsSection = () => {
                     {/* Expanded content */}
                     <div className={`
                       overflow-hidden transition-all duration-500 ease-out
-                      ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
+                      ${isExpanded ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'}
                     `}>
-                      <div className="pt-4 border-t border-muted">
-                        <p className="text-muted-foreground text-sm mb-4">
+                      <div className="pt-4 border-t border-muted space-y-4">
+                        <p className="text-muted-foreground text-sm leading-relaxed">
                           {instrument.details}
                         </p>
                         
-                        <div className="mb-4">
+                        <div>
                           <h4 className="font-semibold text-sm mb-2">O que você vai aprender:</h4>
-                          <p className="text-muted-foreground text-sm">
+                          <p className="text-muted-foreground text-sm leading-relaxed">
                             {instrument.lessons}
                           </p>
                         </div>
 
-                        <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-4 rounded-xl transition-all duration-200 hover:scale-105">
+                        <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-2.5 md:py-3 px-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-sm md:text-base">
                           Encontrar Professores
                         </button>
                       </div>
@@ -188,8 +190,8 @@ const StudentInstrumentsSection = () => {
 
                     {/* Expand indicator */}
                     {!isExpanded && (
-                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                        <Music className="w-4 h-4" />
+                      <div className="absolute top-4 right-4 w-6 h-6 md:w-8 md:h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                        <Music className="w-3 h-3 md:w-4 md:h-4" />
                       </div>
                     )}
                   </div>
