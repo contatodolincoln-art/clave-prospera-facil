@@ -289,6 +289,35 @@
   .stagger-3 { animation-delay: 0.3s; }
   .stagger-4 { animation-delay: 0.4s; }
 
+  /* Badge floating animation for student experience */
+  .badge-float {
+    animation: badgeFloat 3s ease-in-out infinite;
+  }
+  
+  @keyframes badgeFloat {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-5px) rotate(1deg);
+    }
+  }
+
+  /* Enhanced shadow effects for student LP */
+  .shadow-hero {
+    box-shadow: 0 20px 50px -10px rgba(201, 95, 53, 0.3);
+  }
+
+  /* Progress bar animation */
+  .progress-fill {
+    animation: progressFill 2s ease-out forwards;
+  }
+  
+  @keyframes progressFill {
+    from { width: 0%; }
+    to { width: var(--progress-width); }
+  }
+
   /* Duolingo-inspired hover effects */
   .hover-lift {
     transition: var(--transition-smooth);

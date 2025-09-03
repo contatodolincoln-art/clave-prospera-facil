@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
+import { DollarSign, Calculator, Heart } from 'lucide-react';
 
 const StudentPriceSimulator = () => {
   const [lessonsPerMonth, setLessonsPerMonth] = useState([8]);
@@ -36,16 +37,20 @@ const StudentPriceSimulator = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-secondary/10">
       <div className="container mx-auto px-4">
-        <Card className="max-w-3xl mx-auto">
+        <Card className="max-w-4xl mx-auto shadow-elegant">
           <CardContent className="p-8 space-y-8">
             <div className="text-center space-y-4">
+              <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary">
+                <DollarSign className="w-4 h-4" />
+                <span>Transparência total</span>
+              </div>
               <h2 className="text-3xl font-playfair font-bold text-foreground">
-                Calcule quanto você vai investir
+                Veja quanto vai investir no seu sonho
               </h2>
-              <p className="text-muted-foreground">
-                Ajuste os controles e veja o valor das suas aulas
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Sem pegadinhas, sem taxas escondidas. Ajuste e veja exatamente quanto você vai pagar.
               </p>
             </div>
 
@@ -112,26 +117,42 @@ const StudentPriceSimulator = () => {
             </div>
 
             {/* Results */}
-            <div className="text-center space-y-4 p-8 bg-primary rounded-xl text-primary-foreground">
-              <div className="space-y-2">
-                <p className="text-sm opacity-90">
-                  Seu investimento mensal:
-                </p>
-                <div className="text-4xl font-playfair font-bold">
+            <div className="text-center space-y-6 p-8 bg-gradient-to-br from-primary to-primary-variant rounded-xl text-primary-foreground">
+              <div className="space-y-3">
+                <div className="flex items-center justify-center space-x-2">
+                  <Calculator className="w-5 h-5" />
+                  <p className="text-sm font-medium">
+                    Seu investimento no sonho:
+                  </p>
+                </div>
+                <div className="text-5xl font-playfair font-bold">
                   {formatCurrency(totalInvestment)}
                 </div>
                 <p className="text-sm opacity-90">
-                  Aproximadamente {formatCurrency(pricePerLesson[duration as keyof typeof pricePerLesson])} por aula
+                  Apenas {formatCurrency(pricePerLesson[duration as keyof typeof pricePerLesson])} por aula • {lessonsPerMonth[0]} aulas por mês
                 </p>
+                <div className="text-xs opacity-80 max-w-md mx-auto">
+                  💡 Menos que o preço de uma pizza por semana para realizar seu sonho musical
+                </div>
               </div>
               
-              <Button 
-                variant="secondary" 
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 font-semibold mt-6"
-              >
-                🎯 Quero Começar Agora
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button 
+                  variant="secondary" 
+                  size="lg"
+                  className="bg-white text-primary hover:bg-white/90 font-bold"
+                >
+                  🎯 Comece Hoje com Aula Grátis
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-white/30 text-white hover:bg-white/10"
+                >
+                  <Heart className="w-4 h-4 mr-2" />
+                  Salvar Cálculo
+                </Button>
+              </div>
             </div>
           </CardContent>
         </Card>
