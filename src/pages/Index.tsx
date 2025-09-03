@@ -10,6 +10,7 @@ import InteractiveStatsSection from '@/components/InteractiveStatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import AboutClaveSection from '@/components/AboutClaveSection';
 import FinalCTASection from '@/components/FinalCTASection';
+import Footer from '@/components/Footer';
 import FloatingNavigation from '@/components/FloatingNavigation';
 
 const Index = () => {
@@ -32,6 +33,7 @@ const Index = () => {
       <div id="vaga">
         <FinalCTASection />
       </div>
+      <Footer />
       <TeacherProfile />
       <BenefitsGrid />
       <InteractiveStatsSection />
