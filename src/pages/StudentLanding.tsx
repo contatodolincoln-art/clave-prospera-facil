@@ -1,5 +1,6 @@
 import StudentHeroSection from '@/components/student/StudentHeroSection';
 import StudentValueSection from '@/components/student/StudentValueSection';
+import StudentInstrumentsSection from '@/components/student/StudentInstrumentsSection';
 import StudentPriceSimulator from '@/components/student/StudentPriceSimulator';
 import StudentHowItWorksSection from '@/components/student/StudentHowItWorksSection';
 import StudentTestimonialsSection from '@/components/student/StudentTestimonialsSection';
@@ -17,6 +18,7 @@ const StudentLanding = () => {
         <StudentHeroSection />
       </div>
       <StudentValueSection />
+      <StudentInstrumentsSection />
       <div id="preco">
         <StudentPriceSimulator />
       </div>
