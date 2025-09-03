@@ -140,31 +140,27 @@ const StudentInstrumentsSection = () => {
                       <h3 className="text-xl font-bold mb-2">{instrument.name}</h3>
                       <p className="text-muted-foreground text-sm mb-3">{instrument.description}</p>
                       
-                      <div className="flex items-center gap-4 text-sm">
+                      <div className="flex items-center justify-between gap-2 text-sm">
                         <span className="text-primary font-semibold">
                           {instrument.teachers} professores
                         </span>
-                        <span className="text-muted-foreground">
-                          A partir de R$ {instrument.avgPrice}
-                        </span>
+                        {/* Styles tags moved up */}
+                        <div className="flex flex-wrap gap-1">
+                          {instrument.styles.slice(0, isExpanded ? 4 : 2).map((style) => (
+                            <span
+                              key={style}
+                              className="px-2 py-1 bg-muted rounded-md text-xs text-muted-foreground"
+                            >
+                              {style}
+                            </span>
+                          ))}
+                          {!isExpanded && instrument.styles.length > 2 && (
+                            <span className="px-2 py-1 bg-primary/10 rounded-md text-xs text-primary">
+                              +{instrument.styles.length - 2}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    </div>
-
-                    {/* Styles tags */}
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {instrument.styles.slice(0, isExpanded ? 4 : 2).map((style) => (
-                        <span
-                          key={style}
-                          className="px-2 py-1 bg-muted rounded-md text-xs text-muted-foreground"
-                        >
-                          {style}
-                        </span>
-                      ))}
-                      {!isExpanded && instrument.styles.length > 2 && (
-                        <span className="px-2 py-1 bg-primary/10 rounded-md text-xs text-primary">
-                          +{instrument.styles.length - 2}
-                        </span>
-                      )}
                     </div>
 
                     {/* Expanded content */}
