@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&family=Instrument+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,56 +8,55 @@
 
 @layer base {
   :root {
-    /* Base colors - Nova paleta refinada */
-    --background: 48 47% 94%; /* #f9f6f2 */
-    --foreground: 0 0% 12%; /* #1e1e1e */
+    /* Base colors - Nova paleta oficial Clave */
+    --background: 35 45% 89%; /* #f0e7d6 - Base neutra (leveza/fundo) */
+    --foreground: 25 34% 13%; /* #2a1c16 - Contraste profundo (seriedade) */
 
-    /* Card system - cinza neutro */
-    --card: 0 0% 95%; /* #f3f3f3 */
-    --card-foreground: 0 0% 12%;
+    /* Card system */
+    --card: 35 35% 95%; /* Versão mais clara do bege para cards */
+    --card-foreground: 25 34% 13%;
 
     /* Popover */
-    --popover: 0 0% 95%;
-    --popover-foreground: 0 0% 12%;
+    --popover: 35 35% 95%;
+    --popover-foreground: 25 34% 13%;
 
-    /* Primary - laranja vibrante */
-    --primary: 15 69% 54%; /* #c95f35 */
-    --primary-foreground: 0 0% 95%;
-    --primary-glow: 34 76% 61%; /* #ec8d33 */
+    /* Primary - laranja principal (força/identidade) */
+    --primary: 12 100% 46%; /* #ea2e00 */
+    --primary-foreground: 35 45% 89%;
+    --primary-glow: 15 100% 62%; /* #ff6a3c para efeitos glow */
 
-    /* Secondary - laranja mais clara */
-    --secondary: 34 76% 61%; /* #ec8d33 */
-    --secondary-foreground: 0 0% 12%;
+    /* Secondary - apoio vibrante (energia/foco) */
+    --secondary: 15 100% 62%; /* #ff6a3c */
+    --secondary-foreground: 25 34% 13%;
 
-    /* Muted tones */
-    --muted: 48 30% 85%;
-    --muted-foreground: 0 0% 40%;
+    /* Muted tones - derivados da paleta principal */
+    --muted: 35 35% 85%;
+    --muted-foreground: 25 20% 40%;
 
-    /* Accent - variação clara */
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 12%;
+    /* Accent - versão suave do apoio vibrante */
+    --accent: 15 80% 90%;
+    --accent-foreground: 25 34% 13%;
 
     /* Destructive stays standard */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 35 45% 89%;
 
-    /* Borders and inputs */
-    --border: 48 20% 80%;
-    --input: 48 30% 85%;
-    --ring: 15 69% 54%;
+    /* Borders and inputs - harmonizados com a paleta */
+    --border: 35 25% 80%;
+    --input: 35 30% 85%;
+    --ring: 12 100% 46%;
 
     /* Color variations for tabs/sections */
-    --primary-variant: 15 65% 48%; /* Versão mais escura do laranja */
-    --secondary-variant: 34 72% 55%; /* Versão mais escura do secundário */
-    --card-variant: 0 0% 92%; /* Cinza ligeiramente mais escuro */
+    --primary-variant: 12 100% 40%; /* Versão mais escura do laranja principal */
+    --secondary-variant: 15 100% 55%; /* Versão mais escura do apoio vibrante */
     
-    /* Tab-specific color schemes - Diversificação */
-    --tab-primary-bg: 15 69% 54%; /* #c95f35 como fundo */
-    --tab-primary-fg: 0 0% 95%; /* Texto claro no fundo escuro */
-    --tab-secondary-bg: 34 76% 61%; /* #ec8d33 como fundo */
-    --tab-secondary-fg: 0 0% 12%; /* Texto escuro no fundo claro */
-    --tab-cream-bg: 0 0% 95%; /* #f3f3f3 */
-    --tab-cream-fg: 0 0% 12%;
+    /* Tab-specific color schemes */
+    --tab-primary-bg: 12 100% 46%; /* #ea2e00 */
+    --tab-primary-fg: 35 45% 89%;
+    --tab-secondary-bg: 15 100% 62%; /* #ff6a3c */
+    --tab-secondary-fg: 25 34% 13%;
+    --tab-cream-bg: 35 45% 89%; /* #f0e7d6 */
+    --tab-cream-fg: 25 34% 13%;
 
     /* Solid backgrounds - removing gradients */
     --primary-bg: hsl(var(--primary));
@@ -138,7 +137,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-instrument;
   }
 }
 

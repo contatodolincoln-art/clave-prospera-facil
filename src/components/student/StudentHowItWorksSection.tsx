@@ -41,7 +41,7 @@ const StudentHowItWorksSection = () => {
           <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full text-sm font-medium">
             <span>✨ Processo super simples</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold">
+          <h2 className="text-3xl lg:text-4xl font-young-serif font-normal">
             Da primeira aula ao <span className="text-secondary">seu primeiro show</span>
           </h2>
           <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">

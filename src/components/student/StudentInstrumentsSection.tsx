@@ -99,7 +99,7 @@ const StudentInstrumentsSection = () => {
             <Music className="w-5 h-5 text-primary" />
             <span className="text-sm font-medium text-primary">Escolha Seu Instrumento</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-young-serif font-normal mb-6">
             Qual é o <span className="text-primary">seu sonho musical</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

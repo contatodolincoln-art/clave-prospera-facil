@@ -25,15 +25,15 @@ const StudentHeroSection = () => {
                 <span>Seu sonho de tocar música começa aqui</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-playfair font-bold leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-young-serif font-normal leading-tight">
                 Aprenda música <span className="text-secondary">nunca foi tão</span> <span className="underline decoration-secondary decoration-4">acessível</span>
               </h1>
               
-              <p className="text-xl text-primary-foreground/90 leading-relaxed">
+              <p className="text-xl text-primary-foreground/90 leading-relaxed font-instrument">
                 Direto da sua casa, no seu ritmo, com professores que <strong>realmente entendem você</strong>.
               </p>
               
-              <p className="text-lg text-primary-foreground/80">
+              <p className="text-lg text-primary-foreground/80 font-instrument">
                 Acabou a frustração de desistir antes de começar. Acabaram as desculpas de falta de tempo ou professor longe demais.
               </p>
             </div>
@@ -95,8 +95,8 @@ const StudentHeroSection = () => {
                 {/* Video Overlay Text */}
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
-                    <h3 className="text-white font-semibold text-lg">Veja como é simples começar</h3>
-                    <p className="text-white/80 text-sm">2 min • Demonstração da plataforma</p>
+                    <h3 className="text-white font-young-serif text-lg">Veja como é simples começar</h3>
+                    <p className="text-white/80 text-sm font-instrument">2 min • Demonstração da plataforma</p>
                   </div>
                 </div>
               </div>

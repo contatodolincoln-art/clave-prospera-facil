@@ -37,7 +37,7 @@ const StudentTestimonialsSection = () => {
           <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary">
             <span>💝 Histórias reais</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-foreground">
+          <h2 className="text-3xl lg:text-4xl font-young-serif font-normal text-foreground">
             Eles superaram a <span className="text-primary">frustração</span>. Você é o próximo?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

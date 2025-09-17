@@ -7,7 +7,7 @@ const StudentFooter = () => {
         <div className="text-center space-y-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-3xl font-playfair font-bold">Clave</h3>
+            <h3 className="text-3xl font-young-serif font-normal">Clave</h3>
             <p className="text-xl text-white/90">
               Conectando você à música que você ama
             </p>

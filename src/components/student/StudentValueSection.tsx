@@ -41,7 +41,7 @@ const StudentValueSection = () => {
       <div className="container mx-auto px-4">
         {/* Problems solved section */}
         <div className="text-center space-y-8 mb-20">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-foreground">
+          <h2 className="text-3xl lg:text-4xl font-young-serif font-normal text-foreground">
             Chega de <span className="text-primary">frustração</span> com música
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -61,7 +61,7 @@ const StudentValueSection = () => {
 
         {/* Solutions section */}
         <div className="text-center space-y-4 mb-16">
-          <h3 className="text-2xl lg:text-3xl font-playfair font-bold text-foreground">
+          <h3 className="text-2xl lg:text-3xl font-young-serif font-normal text-foreground">
             Por isso a Clave é <span className="text-primary">a escolha certa</span>
           </h3>
         </div>

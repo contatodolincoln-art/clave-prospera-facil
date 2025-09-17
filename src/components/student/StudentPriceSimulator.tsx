@@ -46,7 +46,7 @@ const StudentPriceSimulator = () => {
                 <DollarSign className="w-4 h-4" />
                 <span>Transparência total</span>
               </div>
-              <h2 className="text-3xl font-playfair font-bold text-foreground">
+              <h2 className="text-3xl font-young-serif font-normal text-foreground">
                 Veja quanto vai investir no seu sonho
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -125,7 +125,7 @@ const StudentPriceSimulator = () => {
                     Seu investimento no sonho:
                   </p>
                 </div>
-                <div className="text-5xl font-playfair font-bold">
+                <div className="text-5xl font-young-serif font-normal">
                   {formatCurrency(totalInvestment)}
                 </div>
                 <p className="text-sm opacity-90">

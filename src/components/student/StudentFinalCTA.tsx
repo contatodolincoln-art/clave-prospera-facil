@@ -59,7 +59,7 @@ const StudentFinalCTA = () => {
             <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full text-sm font-medium">
               <span>🎉 Momento de transformar sua vida</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-playfair font-bold">
+            <h2 className="text-4xl lg:text-5xl font-young-serif font-normal">
               Seu <span className="text-secondary underline decoration-4">sonho musical</span> começa agora
             </h2>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">

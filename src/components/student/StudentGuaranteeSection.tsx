@@ -24,7 +24,7 @@ const StudentGuaranteeSection = () => {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-foreground">
+          <h2 className="text-3xl lg:text-4xl font-young-serif font-normal text-foreground">
             Garantia e Segurança
           </h2>
           <p className="text-xl text-muted-foreground">
